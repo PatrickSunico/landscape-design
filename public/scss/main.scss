@@ -1,0 +1,19 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Domine|Lora');
+
+
+// Mixins
+@import 'vendor/bourbon/bourbon';
+@import 'mixins/mixins';
+
+//vendor
+// vendor partials i.e
+// @import 'vendor/bourbon/bourbon';
+// @import 'mixins/animations';
+
+// Globals
+@import 'partials/global';
+
+// Partials
+@import 'partials/carousel';
+@import 'partials/about';

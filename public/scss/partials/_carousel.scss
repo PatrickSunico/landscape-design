@@ -1,0 +1,94 @@
+
+#swiper-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    float: right;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-size: cover;
+}
+
+// .swiper-pagination-bullet {
+//   margin: 5px;
+//   background: transparent;
+//   opacity: 1;
+//   border: solid 1px black;
+//
+//   &-active {
+//     background: black;
+//   }
+// }
+
+
+// indicator styles
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  // bottom: 0px;
+  // left: 0;
+  // width: 0;
+
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+}
+
+
+.swiper-container-horizontal {
+  .swiper-pagination-bullet {
+    display: block;
+    padding: 2px;
+    margin: 5px;
+    background: transparent;
+    opacity: 1;
+    border: solid 1px black;
+
+    &-active {
+      background: black;
+    }
+  }
+  .swiper-pagination-bullets {
+    display: inline-block;
+    top: 50%;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width:540px){
+
+  .swiper-container.s1{
+    display: none;
+  }
+
+  #swiper-wrapper {
+    height: 50%;
+  }
+  .swiper-container {
+      width: 100%;
+      margin: 0;
+  }
+}
