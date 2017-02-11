@@ -3,16 +3,14 @@
 
 
 // Mixins
-@import 'vendor/bourbon/bourbon';
 @import 'mixins/mixins';
 
 //vendor
-// vendor partials i.e
-// @import 'vendor/bourbon/bourbon';
-// @import 'mixins/animations';
+@import 'vendor/bourbon/bourbon';
 
 // Globals
 @import 'partials/global';
+@import 'partials/typography';
 
 // Partials
 @import 'partials/carousel';

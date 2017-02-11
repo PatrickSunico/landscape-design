@@ -1,15 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=Domine|Lora");
-html, body {
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+a {
+  color: skyblue;
+  -webkit-transition: .2s ease-in-out color;
+  transition: .2s ease-in-out color;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+
+.underlined__black {
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.underlined__black:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0%;
+  border-bottom: 4px solid black;
 }
 
 .h1,
@@ -21,24 +63,42 @@ body {
   font-family: 'Domine', serif;
 }
 
-.p-main {
+.h1 {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+.h2 {
+  font-size: 1.800em;
+  font-weight: lighter;
+  letter-spacing: 4px;
+}
+
+.p-heading {
+  font-size: 0.768em;
+}
+
+a, .p-heading, .p-main {
   font-family: 'Lora', serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.underlined__black {
-  display: inline-block;
-  padding-bottom: 16px;
-  position: relative;
-}
-
-.underlined__black:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0%;
-  border-bottom: 4px solid black;
+/* 1em @ 48em (640px) increasing to 2em @ 120em (1920px) */
+@media (min-width: 40rem) {
+  .h1 {
+    font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
+  }
+  .h2 {
+    font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+  }
+  .p-heading {
+    font-size: calc(70% + ((1vw - 0.48rem) * 0.382));
+  }
+  .p-main {
+    font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+  }
 }
 
 #swiper-wrapper {
@@ -53,53 +113,63 @@ body {
   float: right;
 }
 
-.swiper-slide {
+.swiper-container .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-size: cover;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f9f9f9;
 }
 
-.swiper-pagination {
-  position: absolute;
-  top: 50%;
-  padding: 10px;
+.spacing {
+  text-align: left;
+  padding: 0 15px;
 }
 
-.swiper-container-horizontal .swiper-pagination-bullet {
-  display: block;
-  padding: 2px;
+.spacing a.btn-sharp {
+  font-size: 0.982vw;
+  padding: 14px 30px;
+  border: solid #000 1px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .spacing {
+    padding: 0 35px;
+  }
+}
+
+.swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 5px;
   background: transparent;
   opacity: 1;
   border: solid 1px black;
 }
 
-.swiper-container-horizontal .swiper-pagination-bullet-active {
+.swiper-container-horizontal .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background: black;
 }
 
-.swiper-container-horizontal .swiper-pagination-bullets {
-  display: inline-block;
-  top: 50%;
-  bottom: 0;
-}
-
-@media only screen and (max-width: 540px) {
-  .swiper-container.s1 {
-    display: none;
-  }
+@media only screen and (max-width: 580px) {
   #swiper-wrapper {
     height: 50%;
+  }
+  .swiper-container.s1 {
+    display: none;
   }
   .swiper-container {
     width: 100%;
@@ -108,5 +178,8 @@ body {
 }
 
 .content-wrapper {
-  padding: 20px;
+  vertical-align: middle;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0 15px;
 }

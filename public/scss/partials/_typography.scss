@@ -1,0 +1,50 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Domine', serif;
+}
+
+// default mobile font sizes
+.h1 {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+.h2 {
+  font-size: 1.800em;
+  font-weight: lighter;
+  letter-spacing: 4px;
+}
+
+
+// paragraphs styling
+.p-heading {
+  font-size: 0.768em;
+}
+
+a, .p-heading, .p-main {
+  font-family: 'Lora', serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// responsive fonts
+/* 1em @ 48em (640px) increasing to 2em @ 120em (1920px) */
+@media (min-width: 40rem) {
+  .h1 {
+    font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
+  }
+  .h2 {
+    font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+  }
+  .p-heading {
+    font-size: calc(70% + ((1vw - 0.48rem) * 0.382));
+  }
+  .p-main {
+    font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+  }
+}

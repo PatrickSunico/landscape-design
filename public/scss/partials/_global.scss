@@ -1,33 +1,47 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
-    height: 100%;
-}
-body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color:#000;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: 'Domine', serif;
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
 }
 
-.p-main {
-  font-family: 'Lora', serif;
+a {
+  color: skyblue;
+  transition: .2s ease-in-out color;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
 }
 
 // underlined header style
 .underlined__black {
   display: inline-block;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   position: relative;
+  margin: 10px 0;
 
   &:before {
     content: "";
