@@ -22,19 +22,20 @@
 .spacing {
   text-align: left;
   padding: 0 15px;
-    a.btn-sharp {
-      font-size: 0.982vw;
-      padding: 14px 30px;
-      border: solid #000 1px;
-      font-weight: 700;
-      text-transform: capitalize;
-      color: #000;
-      letter-spacing: 2px;
-      -webkit-transition: 0.2s ease-in;
-      transition: 0.2s ease-in;
-      text-decoration: none;
-      display: inline-block;
-    }
+}
+
+a.btn-sharp {
+  padding: 10px 20px;
+  border: solid #000 1px;
+  // font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+  color: #000;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  text-decoration: none;
+  display: inline-block;
 }
 
 
@@ -44,10 +45,6 @@
     padding: 0 35px;
   }
 }
-
-
-
-
 
 // Indicators Styles
 .swiper-container-horizontal {
@@ -69,7 +66,7 @@
 @include breakpoint-580-lg {
 
   #swiper-wrapper {
-    height: 50%;
+    height: 100vh;
   }
   .swiper-container.s1{
     display: none;
