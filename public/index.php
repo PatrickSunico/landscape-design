@@ -1,6 +1,5 @@
 <?php
   include('includes/header.php');
-  require('includes/functions.php');
 ?>
 
 <!-- carousel -->

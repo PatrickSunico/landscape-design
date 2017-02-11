@@ -2,6 +2,29 @@
   // image interpolation
   $dirname = "images/";
   $images = glob($dirname."*.jpg");
+
+
+  $jsondata = file_get_contents("resources.json");
+  $json = json_decode($jsondata, true);
+
+  // Extract JSON DATA
+  // function extractJSON() {
+
+
+    // // $output = "<div class='spacing'>";
+    // foreach($json['slides'] as $slide) {
+    //   $output .= "<h2>" . $slide['h2'] . "</h2>";
+    //   $output .= "<h1>" . $slide['h1'] . "</h1>";
+    //   $output .= "<p class='p-heading'>" . $slide['paragraph'] . "</p>";
+    // }
+    // // $output .= "</div>";
+    // echo $output;
+  // }
+
+
+
+
+
   // Test Code
   // function data() {
   //   $food = array(
@@ -36,27 +59,4 @@
   //     )
   //   );
   // }
-?>
-
-
-<?php
-// Extract JSON DATA
-function extractJSON() {
-  $jsondata = file_get_contents("resources.json");
-  $json = json_decode($jsondata, true);
-
-  // $output = "<div class='spacing'>";
-  foreach($json['slides'] as $slide) {
-    $output .= "<h2>" . $slide['h2'] . "</h2>";
-    $output .= "<h1>" . $slide['h1'] . "</h1>";
-    $output .= "<p class='p-heading'>" . $slide['paragraph'] . "</p>";
-?>
-
-    <div class="swiper-slide">
-      <div class="spacing">
-        <?php echo $output; ?>
-      </div>
-    </div>
-  <?php }
-}
 ?>

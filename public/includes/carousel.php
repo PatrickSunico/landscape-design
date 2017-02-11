@@ -1,3 +1,7 @@
+
+<?php
+  require('functions.php');
+?>
 <div class="swiper-container s1">
   <div class="swiper-wrapper">
       <?php
@@ -12,18 +16,16 @@
 
 <div class="swiper-container s2">
   <div class="swiper-wrapper">
+    <!-- foreach item in our json file loop swiper slide div 3 times to implode appropriate data -->
+    <?php foreach($json['slides'] as $slide) { ?>
       <div class="swiper-slide">
         <div class="spacing">
-          <h2 class="h2">枯山水</h2>
-          <h1 class="h1">The Art of Zen Landscaping</h1>
-          <p class="p-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div class="button-position">
-            <a href="#" class="btn-sharp"> Read More </a>
-          </div>
+          <?php echo "<h2 class='h2'>" . $slide['h2'] . "</h2>"; ?>
+          <?php echo "<h1 class='h1'>" . $slide['h1'] . "</h1>"; ?>
+          <?php echo "<p class='p-heading'>" . $slide['paragraph'] . "</p>"; ?>
         </div>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+    <?php } ?>
   </div>
   <div class="swiper-pagination"></div>
 </div>
