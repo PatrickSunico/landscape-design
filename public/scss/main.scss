@@ -1,6 +1,5 @@
 // fonts
-@import url('https://fonts.googleapis.com/css?family=Domine|Lora');
-
+@import url('https://fonts.googleapis.com/css?family=Domine|Lato:300,400,700');
 
 // Mixins
 @import 'mixins/mixins';
@@ -13,5 +12,6 @@
 @import 'partials/typography';
 
 // Partials
+@import 'partials/navigation';
 @import 'partials/carousel';
 @import 'partials/about';

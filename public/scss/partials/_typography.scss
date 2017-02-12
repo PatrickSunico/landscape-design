@@ -8,7 +8,7 @@
 }
 
 a, .p-heading, .p-main {
-  font-family: 'Lora', serif;
+  font-family: 'Lato', serif;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -36,7 +36,13 @@ a, .p-heading, .p-main {
   font-size: 0.768em;
 }
 
+// logo branad
+.logo-brand {
+  font-size: 28px;
+  font-family: 'Domine', serif;
+}
 
+// button
 a.btn-sharp {
   font-size: 0.800em;
 }

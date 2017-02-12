@@ -11,3 +11,4 @@
         <link rel="stylesheet" href="/css/main.min.css">
   </head>
   <body>
+    <?php include("includes/navigation.php"); ?>
