@@ -123,53 +123,95 @@ a.btn-sharp {
 
 .nav-custom {
   width: 100%;
-  background-color: #000;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   position: fixed;
   top: 0;
   z-index: 9999;
-}
-
-.nav-custom .logo .logo-brand {
-  text-decoration: none;
-  color: #fff;
-  line-height: 100px;
+  background-color: white;
 }
 
 .nav-custom .logo {
   float: left;
   vertical-align: middle;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
-.hamburger {
+.nav-custom .logo .logo-brand {
+  text-decoration: none;
+  color: #000;
+  line-height: 60px;
+}
+
+.nav-custom .hamburger {
   display: inline-block;
   cursor: pointer;
-  margin: 36px;
+  margin: 15px 20px;
   float: right;
 }
 
-.hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+.nav-custom .hamburger .bar1, .nav-custom .hamburger .bar2, .nav-custom .hamburger .bar3 {
   /*width: 35px;*/
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   margin: 6px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.hamburger .bar1 {
+.nav-custom .hamburger .bar1 {
   width: 30px;
 }
 
-.hamburger .bar2 {
+.nav-custom .hamburger .bar2 {
   width: 25px;
 }
 
-.hamburger .bar3 {
+.nav-custom .hamburger .bar3 {
   width: 20px;
+}
+
+@media only screen and (min-width: 991px) {
+  .nav-custom {
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    background-color: transparent !important;
+  }
+  .nav-custom .logo {
+    float: left;
+    vertical-align: middle;
+    padding: 0 18px;
+  }
+  .nav-custom .logo .logo-brand {
+    text-decoration: none;
+    color: #000;
+    line-height: 100px;
+  }
+  .nav-custom .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin: 36px;
+    float: right;
+  }
+  .nav-custom .hamburger .bar1, .nav-custom .hamburger .bar2, .nav-custom .hamburger .bar3 {
+    /*width: 35px;*/
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .nav-custom .hamburger .bar1 {
+    width: 30px;
+  }
+  .nav-custom .hamburger .bar2 {
+    width: 25px;
+  }
+  .nav-custom .hamburger .bar3 {
+    width: 20px;
+  }
 }
 
 #swiper-wrapper {
@@ -182,6 +224,16 @@ a.btn-sharp {
   height: 100%;
   margin: 0;
   float: right;
+}
+
+.swiper-container .vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 40, 44, 0.5);
+  z-index: 9999;
 }
 
 .swiper-container .swiper-slide {
@@ -236,7 +288,7 @@ a.btn-sharp {
 
 @media only screen and (max-width: 580px) {
   #swiper-wrapper {
-    height: 80vh;
+    height: 100vh;
   }
   .swiper-container.s1 {
     display: none;

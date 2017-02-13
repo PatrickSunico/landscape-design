@@ -9,6 +9,15 @@
     height: 100%;
     margin: 0;
     float: right;
+    .vignette{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(34,40,44,0.5);
+      z-index: 9999;
+    }
     .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -66,7 +75,7 @@ a.btn-sharp {
 @include breakpoint-580-lg {
 
   #swiper-wrapper {
-    height: 80vh;
+    height: 100vh;
   }
   .swiper-container.s1{
     display: none;
