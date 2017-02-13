@@ -121,41 +121,53 @@ a.btn-sharp {
   }
 }
 
-.nav-custom {
+nav {
+  background-color: white;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: fixed;
   width: 100%;
   overflow-x: hidden;
-  position: fixed;
-  top: 0;
   z-index: 9999;
-  background-color: white;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
+  padding: 0;
 }
 
-.nav-custom .logo {
-  float: left;
-  vertical-align: middle;
-  padding: 0 18px;
+nav .logo .logo-brand {
+  margin: 0 20px;
+  color: black;
 }
 
-.nav-custom .logo .logo-brand {
-  text-decoration: none;
-  color: #000;
-  line-height: 60px;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+nav ul.nav-wrapper {
+  padding-left: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.nav-custom .hamburger {
-  display: inline-block;
-  cursor: pointer;
-  margin: 15px 20px;
-  float: right;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+nav ul.nav-wrapper li {
+  margin: 20px;
 }
 
-.nav-custom .hamburger .bar1, .nav-custom .hamburger .bar2, .nav-custom .hamburger .bar3 {
+nav ul.nav-wrapper li a {
+  line-height: 2;
+}
+
+.hamburger {
+  height: 30px;
+}
+
+.hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
   height: 2px;
   background-color: #000;
   margin: 6px 0;
@@ -163,36 +175,50 @@ a.btn-sharp {
   transition: 0.4s;
 }
 
-.nav-custom .hamburger .bar1 {
+.hamburger .bar1 {
   width: 30px;
 }
 
-.nav-custom .hamburger .bar2 {
+.hamburger .bar2 {
   width: 25px;
 }
 
-.nav-custom .hamburger .bar3 {
+.hamburger .bar3 {
   width: 20px;
 }
 
-@media only screen and (min-width: 991px) {
-  .nav-custom {
-    overflow-x: hidden;
-    position: absolute;
+@media only screen and (min-width: 768px) {
+  nav {
     background-color: transparent !important;
+    position: absolute;
   }
-  .nav-custom .logo {
-    padding: 0 30px;
+  nav .logo .logo-brand {
+    margin: 0 34px;
   }
-  .nav-custom .logo .logo-brand {
-    color: #000;
-    line-height: 100px;
+  nav ul.nav-wrapper li {
+    margin: 20px;
   }
-  .nav-custom .hamburger {
-    margin: 36px;
+  nav ul.nav-wrapper li a {
+    line-height: 2;
   }
-  .nav-custom .hamburger .bar1, .nav-custom .hamburger .bar2, .nav-custom .hamburger .bar3 {
+  .hamburger {
+    height: 30px;
+  }
+  .hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+    height: 2px;
     background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .hamburger .bar1 {
+    width: 30px;
+  }
+  .hamburger .bar2 {
+    width: 25px;
+  }
+  .hamburger .bar3 {
+    width: 20px;
   }
 }
 
@@ -268,7 +294,7 @@ a.btn-sharp {
   background: black;
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 768px) {
   #swiper-wrapper {
     height: 100vh;
   }

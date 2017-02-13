@@ -1,39 +1,161 @@
+// // Mobile
+// .nav-custom {
+//   width: 100%;
+//   overflow-x: hidden;
+//   position: fixed;
+//   top: 0;
+//   z-index: 9999;
+//   background-color: rgb(255, 255, 255);
+//   @include transition(.4s ease-in-out);
+//   .logo {
+//     float: left;
+//     vertical-align: middle;
+//     padding: 0 18px;
+//     .logo-brand {
+//       text-decoration: none;
+//       color: #000;
+//       line-height: 60px;
+//       @include transition(1s all ease);
+//
+//
+//     }
+//   }
+//   .hamburger {
+//     display: inline-block;
+//     cursor: pointer;
+//     margin: 15px 20px;
+//     float: right;
+//     @include transition(1s all ease);
+//
+//
+//
+//     .bar1, .bar2, .bar3 {
+//         height: 2px;
+//         background-color: #000;
+//         margin: 6px 0;
+//         transition: 0.4s;
+//     }
+//     .bar1 {
+//       width: 30px;
+//     }
+//     .bar2 {
+//       width: 25px;
+//     }
+//     .bar3{
+//       width: 20px;
+//     }
+//   }
+// }
+//
+// // Desktop
+// @include breakpoint-991-sm {
+//   .nav-custom {
+//     overflow-x: hidden;
+//     position: absolute;
+//     background-color: transparent !important;
+//
+//     .logo {
+//       padding: 0 30px;
+//       .logo-brand {
+//         color: #000;
+//         line-height: 100px;
+//       }
+//     }
+//
+//     .hamburger {
+//       margin: 36px;
+//
+//       .bar1, .bar2, .bar3 {
+//           background-color: #fff;
+//       }
+//     }
+//   }
+// }
+
+
+
 // Mobile
-.nav-custom {
+nav {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
   width: 100%;
   overflow-x: hidden;
-  position: fixed;
-  top: 0;
   z-index: 9999;
-  background-color: rgb(255, 255, 255);
-  @include transition(.4s ease-in-out);
+  padding: 0;
   .logo {
-    float: left;
-    vertical-align: middle;
-    padding: 0 18px;
     .logo-brand {
-      text-decoration: none;
-      color: #000;
-      line-height: 60px;
-      @include transition(1s all ease);
-
-
+      margin: 0 20px;
+      color: black;
     }
   }
+  ul.nav-wrapper {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+
+    li{
+      margin: 20px;
+      a {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+// burger styles
+.hamburger {
+  height: 30px;
+  .bar1, .bar2, .bar3 {
+    height: 2px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .bar1 {
+    width: 30px;
+  }
+  .bar2 {
+    width: 25px;
+  }
+  .bar3{
+    width: 20px;
+  }
+}
+
+
+// Desktop
+@include breakpoint-768-sm {
+  nav {
+    background-color: transparent !important;
+    position: absolute;
+    .logo {
+      .logo-brand {
+        margin: 0 34px;
+      }
+    }
+    ul.nav-wrapper {
+      li{
+        margin: 20px;
+        a {
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  // burger styles
   .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    margin: 15px 20px;
-    float: right;
-    @include transition(1s all ease);
-
-
-
+    height: 30px;
     .bar1, .bar2, .bar3 {
-        height: 2px;
-        background-color: #000;
-        margin: 6px 0;
-        transition: 0.4s;
+      height: 2px;
+      background-color: #fff;
+      margin: 6px 0;
+      transition: 0.4s;
     }
     .bar1 {
       width: 30px;
@@ -43,31 +165,6 @@
     }
     .bar3{
       width: 20px;
-    }
-  }
-}
-
-// Desktop
-@include breakpoint-991-sm {
-  .nav-custom {
-    overflow-x: hidden;
-    position: absolute;
-    background-color: transparent !important;
-
-    .logo {
-      padding: 0 30px;
-      .logo-brand {
-        color: #000;
-        line-height: 100px;
-      }
-    }
-
-    .hamburger {
-      margin: 36px;
-
-      .bar1, .bar2, .bar3 {
-          background-color: #fff;
-      }
     }
   }
 }

@@ -72,7 +72,7 @@ a.btn-sharp {
 }
 
 // disable images on mobile screen
-@include breakpoint-580-lg {
+@include breakpoint-768-lg {
 
   #swiper-wrapper {
     height: 100vh;
