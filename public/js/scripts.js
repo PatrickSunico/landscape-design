@@ -23,4 +23,17 @@
     effect: 'fade',
     direction: 'horizontal'
   });
+
+
+$(document).ready(function(){
+  // toggle overlay
+  $('.hamburger').on('click', function(){
+    $('.overlay').addClass('open');
+  });
+
+  $('.close-menu').on('click', function(){
+    $('.overlay').removeClass('open');
+  });
+});
+
 // });

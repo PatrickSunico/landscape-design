@@ -163,11 +163,17 @@ nav ul.nav-wrapper li a {
   line-height: 2;
 }
 
-.hamburger {
+button.hamburger {
   height: 30px;
+  background-color: transparent !important;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  pointer-events: initial;
 }
 
-.hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+button.hamburger .bar1, button.hamburger .bar2, button.hamburger .bar3 {
   height: 2px;
   background-color: #000;
   margin: 6px 0;
@@ -175,15 +181,15 @@ nav ul.nav-wrapper li a {
   transition: 0.4s;
 }
 
-.hamburger .bar1 {
+button.hamburger .bar1 {
   width: 30px;
 }
 
-.hamburger .bar2 {
+button.hamburger .bar2 {
   width: 25px;
 }
 
-.hamburger .bar3 {
+button.hamburger .bar3 {
   width: 20px;
 }
 
@@ -201,25 +207,48 @@ nav ul.nav-wrapper li a {
   nav ul.nav-wrapper li a {
     line-height: 2;
   }
-  .hamburger {
+  button.hamburger {
     height: 30px;
   }
-  .hamburger .bar1, .hamburger .bar2, .hamburger .bar3 {
+  button.hamburger .bar1, button.hamburger .bar2, button.hamburger .bar3 {
     height: 2px;
     background-color: #fff;
     margin: 6px 0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  .hamburger .bar1 {
+  button.hamburger .bar1 {
     width: 30px;
   }
-  .hamburger .bar2 {
+  button.hamburger .bar2 {
     width: 25px;
   }
-  .hamburger .bar3 {
+  button.hamburger .bar3 {
     width: 20px;
   }
+}
+
+/*
+  -----Overlay New Code-----
+*/
+.overlay {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
 }
 
 #swiper-wrapper {
