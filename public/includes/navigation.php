@@ -18,22 +18,22 @@
 </nav>
 
 <!-- Overlay new Code -->
-<!-- <div class="overlay">
-  <h2 class="h2">Navigation</h2>
-  <nav class="overlay-menu">
+ <div class="overlay">
+  <!--<h2 class="nav-title">Navigation</h2>-->
+  <div class="overlay-menu">
     <ul>
       <li>
-        <a href="#">About</a>
+        <a class="overlay-link" href="#">About</a>
       </li>
       <li>
-        <a href="#">Showcase</a>
+        <a class="overlay-link" href="#">Showcase</a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a class="overlay-link" href="#">Contact</a>
       </li>
       <li>
         <span class="close-menu"></span>
       </li>
     </ul>
-  </nav>
-</div> -->
+  </div>
+</div> 
