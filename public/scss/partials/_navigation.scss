@@ -164,7 +164,7 @@ button.hamburger {
         font-weight: 400;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 20px;
+        letter-spacing: 15px;
         /* margin: 0 auto; */
         padding: 10px;
         /* width: 50%; */
@@ -195,6 +195,7 @@ button.hamburger {
 .close-menu {
     cursor: pointer;
     transition: transform 0.30s;
+    @include transition(.9s ease-out);
 }
 
 .close-menu {
@@ -231,11 +232,20 @@ button.hamburger {
     background: white;
 }
 
+// close-menu rotate animation 
+.close-menu:hover {
+    @include transform(rotate(360deg));
+    @include transition(.9s ease-out);
+    // @include animation-duration(2s);
+    // @include transform(100ms ease-in-out);
+}
+
 // Desktop Layout 
 @include breakpoint-1200-sm {
     .overlay {
         .overlay-menu {
             font-size: 40px;
+            letter-spacing: 20px;
         }
     }
 }

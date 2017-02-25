@@ -298,7 +298,7 @@ button.hamburger .bar3 {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   /* margin: 0 auto; */
   padding: 10px;
   /* width: 50%; */
@@ -330,6 +330,8 @@ button.hamburger .bar3 {
   transition: -webkit-transform 0.30s;
   transition: transform 0.30s;
   transition: transform 0.30s, -webkit-transform 0.30s;
+  -webkit-transition: 0.9s ease-out;
+  transition: 0.9s ease-out;
 }
 
 .close-menu {
@@ -368,9 +370,17 @@ button.hamburger .bar3 {
   background: white;
 }
 
+.close-menu:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: 0.9s ease-out;
+  transition: 0.9s ease-out;
+}
+
 @media only screen and (min-width: 1200px) {
   .overlay .overlay-menu {
     font-size: 40px;
+    letter-spacing: 20px;
   }
 }
 
