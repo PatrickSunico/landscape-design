@@ -39,6 +39,13 @@ button.hamburger {
     outline: none;
     padding: 0;
     pointer-events: initial;
+    @include transition(all .4s ease-out);
+    z-index: 9999;
+    // Hover Animation
+    &:hover {
+        transform: scale(1.1);
+        @include transition(all .4s ease-in);
+    }
     .bar1,
     .bar2,
     .bar3 {
@@ -114,7 +121,7 @@ button.hamburger {
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 .overlay.open {
@@ -123,10 +130,9 @@ button.hamburger {
     height: 100%;
 }
 
-// overlay link fadeinRight animation
 .overlay.open li {
-    animation: fadeInRight .5s ease forwards;
-    animation-delay: .35
+    animation: fadeInDown .5s ease forwards;
+    animation-delay: .35s;
 }
 
 .overlay.open li:nth-of-type(2) {
@@ -137,38 +143,34 @@ button.hamburger {
     animation-delay: .45s;
 }
 
-.overlay.open li:nth-of-type(4) {
-    animation-delay: .50s;
+// .overlay.open li:nth-of-type(4) {
+//     animation-delay: .50s;
+// }
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        @include transform(translateY(-20px));
+    }
+    100% {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
 }
 
-// overlay layout style 
+// End Key Frames 
 .overlay {
-    .nav-title {
-        font-size: 22px;
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        top: 8%;
-        letter-spacing: 20px;
-    }
     .overlay-menu {
         position: relative;
         top: 50%;
-        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         font-size: 25px;
         font-weight: 400;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 15px;
-        /* margin: 0 auto; */
+        letter-spacing: 40px;
         padding: 10px;
-        /* width: 50%; */
     }
+    // ul list 
     ul {
         list-style: none;
         padding: 0;
@@ -177,25 +179,42 @@ button.hamburger {
         position: relative;
         height: 100%;
         li {
-            // display: block;
+            display: block;
             position: relative;
-            // opacity: 0;
-            margin-top: 40px;
+            opacity: 0;
             margin-bottom: 40px;
-            a.overlay-link {
+            margin-top: 40px;
+            a {
+                display: block;
+                position: relative;
                 color: white;
+                text-decoration: none;
+                overflow: hidden;
             }
         }
     }
 }
 
-// End 
-// open close button styles
-.open-menu,
+
+/* strike through hover animation*/
+
+// .overlay ul li a:hover,
+// .overlay ul li a:focus,
+// .overlay ul li a:active {
+//     color: #ea2e49;
+// }
+// .overlay ul li a:hover:after,
+// .overlay ul li a:focus:after,
+// .overlay ul li a:active:after {
+//     width: 100%;
+//     background: #000;
+// }
+// End Test 
+//open close button styles
 .close-menu {
     cursor: pointer;
     transition: transform 0.30s;
-    @include transition(.9s ease-out);
+    @include transition(.5s ease-in);
 }
 
 .close-menu {
@@ -235,11 +254,12 @@ button.hamburger {
 // close-menu rotate animation 
 .close-menu:hover {
     @include transform(rotate(360deg));
-    @include transition(.9s ease-out);
+    @include transition(.5s ease-out);
     // @include animation-duration(2s);
     // @include transform(100ms ease-in-out);
 }
 
+// End 
 // Desktop Layout 
 @include breakpoint-1200-sm {
     .overlay {

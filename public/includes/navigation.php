@@ -31,9 +31,6 @@
       <li>
         <a class="overlay-link" href="#">Contact</a>
       </li>
-      <li>
-        <span class="close-menu"></span>
-      </li>
     </ul>
   </div>
 </div> 

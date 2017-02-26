@@ -26,25 +26,8 @@ var swiper2 = new Swiper('.s2', {
 
 $(document).ready(function() {
     // open overlay on click
-    $('.hamburger').on('click', function() {
-        $('.overlay').addClass('open');
-    });
 
-    // close overlay on click
-    $('.close-menu').on('click', function() {
-        $('.overlay').removeClass('open');
+    $('.hamburger').on('click', function(e) {
+        $('.overlay').toggleClass('open');
     });
 });
-
-
-
-// $(document).ready(function() {
-//     // toggle overlay
-//     $('.hamburger').on('click', function() {
-//         $('.overlay').addClass('open');
-//     });
-
-//     $('.close-menu').on('click', function() {
-//         $('.overlay').removeClass('open');
-//     });
-// });
