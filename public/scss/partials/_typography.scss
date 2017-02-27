@@ -4,74 +4,77 @@
 .h4,
 .h5,
 .h6 {
-  font-family: 'Domine', serif;
+    font-family: 'Domine', serif;
 }
 
-a, .p-heading, .p-main {
-  font-family: 'Lato', serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
+a,
+.p-heading,
+.p-main {
+    font-family: 'Lato', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 // default mobile font sizes
 .h1 {
-  font-size: 1.200em;
-  font-weight: bold;
-  letter-spacing: 6px;
+    font-size: 1.200em;
+    font-weight: bold;
+    letter-spacing: 6px;
 }
 
 .h2 {
-  font-size: 0.980em;
-  font-weight: lighter;
-  letter-spacing: 4px;
+    font-size: 0.980em;
+    font-weight: lighter;
+    letter-spacing: 4px;
 }
 
 .h3 {
-  font-size: 1.200em;
-  letter-spacing: 2px;
+    font-size: 1.200em;
+    letter-spacing: 2px;
 }
 
 // paragraphs styling
 .p-heading {
-  font-size: 0.768em;
+    font-size: 0.768em;
 }
 
 // logo branad
 .logo-brand {
-  font-size: 28px;
-  font-family: 'Domine', serif;
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 // button
 a.btn-sharp {
-  font-size: 0.800em;
+    font-size: 0.800em;
 }
 
 // responsive fonts
+
 /* 1em @ 48em (640px) increasing to 2em @ 120em (1920px) */
+
 @media (min-width: 40rem) {
-  // main headings
-  .h1 {
-    font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
-  }
-  .h2 {
-    font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
-  }
-  .h3 {
-    font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
-  }
-
-  // paragraph heading carousel
-  .p-heading {
-    font-size: calc(70% + ((1vw - 0.48rem) * 0.382));
-  }
-
-  // paragraph main content
-  .p-main {
-    font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
-  }
-
-  a.btn-sharp {
-    font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
-  }
+    // main headings
+    .h1 {
+        font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
+    }
+    .h2 {
+        font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+    }
+    .h3 {
+        font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+    }
+    // paragraph heading carousel
+    .p-heading {
+        font-size: calc(70% + ((1vw - 0.48rem) * 0.382));
+    }
+    // paragraph main content
+    .p-main {
+        font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+    }
+    a.btn-sharp {
+        font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+    }
 }

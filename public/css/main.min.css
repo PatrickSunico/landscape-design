@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Domine|Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -63,7 +64,9 @@ img {
   font-family: 'Domine', serif;
 }
 
-a, .p-heading, .p-main {
+a,
+.p-heading,
+.p-main {
   font-family: 'Lato', serif;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -92,7 +95,9 @@ a, .p-heading, .p-main {
 
 .logo-brand {
   font-size: 28px;
-  font-family: 'Domine', serif;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 a.btn-sharp {
@@ -122,17 +127,28 @@ a.btn-sharp {
 }
 
 nav {
-  background-color: white;
-  padding: 10px;
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  box-pack: justify;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  background-color: white;
+  padding: 10px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: fixed;
@@ -151,6 +167,9 @@ nav ul.nav-wrapper {
   padding-left: 0;
   list-style: none;
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -178,7 +197,7 @@ button.hamburger {
 
 button.hamburger:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
@@ -203,6 +222,102 @@ button.hamburger .bar2 {
 
 button.hamburger .bar3 {
   width: 20px;
+}
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 9998;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100vh;
+}
+
+.overlay.open li {
+  -webkit-animation: fadeInDown .5s ease forwards;
+          animation: fadeInDown .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+
+.overlay.open li:nth-last-of-type(2) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.overlay.open li:nth-last-of-type(3) {
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+
+.overlay .overlay-menu {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  padding: 10px;
+}
+
+.overlay .overlay-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.overlay .overlay-menu ul li {
+  opacity: 0;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.overlay .overlay-menu ul li a {
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -240,162 +355,6 @@ button.hamburger .bar3 {
   button.hamburger .bar3 {
     width: 20px;
   }
-}
-
-.overlay {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity .35s, visibility .35s, height .35s;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  z-index: 9998;
-}
-
-.overlay.open {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-}
-
-.overlay.open li {
-  -webkit-animation: fadeInDown .5s ease forwards;
-          animation: fadeInDown .5s ease forwards;
-  -webkit-animation-delay: .35s;
-          animation-delay: .35s;
-}
-
-.overlay.open li:nth-last-of-type(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
-}
-
-.overlay.open li:nth-last-of-type(3) {
-  -webkit-animation-delay: .45s;
-          animation-delay: .45s;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.overlay .overlay-menu {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 20px;
-  padding: 10px;
-}
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  height: 100%;
-}
-
-.overlay ul li {
-  display: block;
-  position: relative;
-  opacity: 0;
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-
-.overlay ul li a {
-  display: block;
-  position: relative;
-  color: white;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-/* strike through hover animation*/
-.close-menu {
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.30s;
-  transition: -webkit-transform 0.30s;
-  transition: transform 0.30s;
-  transition: transform 0.30s, -webkit-transform 0.30s;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
-}
-
-.close-menu {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
-}
-
-.close-menu::before,
-.close-menu::after {
-  height: 4px;
-  margin-top: -2px;
-}
-
-.close-menu::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.close-menu::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.close-menu::before,
-.close-menu::after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  background: white;
-}
-
-.close-menu:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
 }
 
 @media only screen and (min-width: 1200px) {
