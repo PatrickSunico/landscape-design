@@ -270,12 +270,12 @@ button.hamburger .bar3 {
           animation-delay: .35s;
 }
 
-.overlay.open li:nth-of-type(2) {
+.overlay.open li:nth-last-of-type(2) {
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
 }
 
-.overlay.open li:nth-of-type(3) {
+.overlay.open li:nth-last-of-type(3) {
   -webkit-animation-delay: .45s;
           animation-delay: .45s;
 }
@@ -315,7 +315,7 @@ button.hamburger .bar3 {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 40px;
+  letter-spacing: 20px;
   padding: 10px;
 }
 
