@@ -105,6 +105,7 @@ button.hamburger {
         text-align: center;
         letter-spacing: 10px;
         padding: 10px;
+        // Li Animation 
         ul {
             list-style: none;
             padding: 0;
@@ -116,13 +117,61 @@ button.hamburger {
                 opacity: 0;
                 margin-bottom: 40px;
                 margin-top: 40px;
+                // Hover animation
                 a {
-                    color: white;
+                    position: relative;
+                    @include display(flex);
+                    @include box-orient (vertical);
+                    @include box-direction(normal);
+                    @include flex-direction(column);
+                    margin: 0 auto;
+                    outline: none;
+                    color: #d8d8d8;
                     text-decoration: none;
-                    overflow: hidden;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 1em;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    // Hover, Active, Focus 
+                    &:hover,
+                    &:focus {
+                        outline: none;
+                        color: #fff;
+                    }
+                    // hover before after main animation
+                    &:hover::before,
+                    &:focus::before,
+                    &:hover::after,
+                    &:focus::after {
+                        opacity: 1;
+                        @include transform(translateY(0px));
+                    }
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #fff;
+                        content: '';
+                        opacity: 0;
+                        transition: opacity 0.3s, transform 0.3s;
+                        transform: (translateY(-10px));
+                    }
+                    &::before {
+                        top: 0;
+                        @include transform(translateY(-10px));
+                    }
+                    &::after {
+                        bottom: 0;
+                        @include transform(translateY(10px));
+                    }
+                    // end main hover animation
                 }
             }
         }
+        // End Li Animation
     }
 }
 

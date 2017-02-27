@@ -29,7 +29,7 @@ a,
 }
 
 .h3 {
-    font-size: 1.200em;
+    font-size: 1.300em;
     letter-spacing: 2px;
 }
 
@@ -64,7 +64,7 @@ a.btn-sharp {
         font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
     }
     .h3 {
-        font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+        font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
     }
     // paragraph heading carousel
     .p-heading {
@@ -72,7 +72,7 @@ a.btn-sharp {
     }
     // paragraph main content
     .p-main {
-        font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+        font-size: calc(70% + ((1vw - 0.1rem) * 0.486));
     }
     a.btn-sharp {
         font-size: calc(70% + ((1vw - 0.48rem) * 0.486));

@@ -19,5 +19,38 @@
     </div>
   </div>
 <?php }
-  }
+    }
 ?>
+
+<?php 
+
+  function displayImages(){
+    $showcaseDirName = "images/showcase/";
+    $showcaseImages = glob($showcaseDirName."*.jpg");
+    $maxWidth = 1072;
+    $minWidth = 508;
+    $countMax = 0;
+    $countMin = 0;
+
+      foreach($showcaseImages as $showcaseImage) {
+        list($width, $height) = getimagesize($showcaseImage);
+        echo $width . " x " . $height . "<br>";
+        echo "<br>";
+        // Count how many images there are with different dimensions
+        if($width >= $maxWidth) {
+          
+          $countMax++;
+
+        } elseif($width <= $minWidth) {
+
+          $countMin++;
+        }
+      }
+        echo $countMax . "image(s)" . "\n";
+        echo $countMin . "image(s)". "\n";
+  }
+
+?>
+
+
+
