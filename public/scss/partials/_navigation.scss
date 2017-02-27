@@ -108,7 +108,7 @@ button.hamburger {
 }
 
 // /*
-//   -----Overlay New Code-----
+//   -----Overlay-----
 // */
 .overlay {
     position: fixed;
@@ -116,49 +116,12 @@ button.hamburger {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     opacity: 0;
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden;
     z-index: 9998;
-}
-
-.overlay.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
-}
-
-.overlay.open li {
-    animation: fadeInDown .5s ease forwards;
-    animation-delay: .35s;
-}
-
-.overlay.open li:nth-of-type(2) {
-    animation-delay: .4s;
-}
-
-.overlay.open li:nth-of-type(3) {
-    animation-delay: .45s;
-}
-
-// .overlay.open li:nth-of-type(4) {
-//     animation-delay: .50s;
-// }
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        @include transform(translateY(-20px));
-    }
-    100% {
-        opacity: 1;
-        @include transform(translateY(0));
-    }
-}
-
-// End Key Frames 
-.overlay {
     .overlay-menu {
         position: relative;
         top: 50%;
@@ -167,105 +130,73 @@ button.hamburger {
         font-weight: 400;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 40px;
+        letter-spacing: 15px;
         padding: 10px;
     }
-    // ul list 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        display: inline-block;
-        position: relative;
-        height: 100%;
-        li {
-            display: block;
+}
+
+// open overlay, append open in overlay and li animations
+.overlay {
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
             position: relative;
-            opacity: 0;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            a {
+            height: 100%;
+            // note: just add more child li elements to set animation delays to your needs
+            li {
                 display: block;
                 position: relative;
-                color: white;
-                text-decoration: none;
-                overflow: hidden;
+                opacity: 0;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                animation: fadeInDown .5s ease forwards;
+                animation-delay: .35s;
+                &:nth-of-type(2) {
+                    animation-delay: .4s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: .45s;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    color: white;
+                    text-decoration: none;
+                    overflow: hidden;
+                }
             }
         }
     }
 }
 
-
-/* strike through hover animation*/
-
-// .overlay ul li a:hover,
-// .overlay ul li a:focus,
-// .overlay ul li a:active {
-//     color: #ea2e49;
-// }
-// .overlay ul li a:hover:after,
-// .overlay ul li a:focus:after,
-// .overlay ul li a:active:after {
-//     width: 100%;
-//     background: #000;
-// }
-// End Test 
-//open close button styles
-.close-menu {
-    cursor: pointer;
-    transition: transform 0.30s;
-    @include transition(.5s ease-in);
+// Keyframes
+@include keyframes(fadeInDown) {
+    from {
+        opacity: 0;
+        @include transform(translateY(-20px));
+    }
+    to {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
 }
 
-.close-menu {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-}
-
-.close-menu::before,
-.close-menu::after {
-    height: 4px;
-    margin-top: -2px;
-}
-
-.close-menu::before {
-    @include transform(rotate(45deg));
-}
-
-.close-menu::after {
-    @include transform(rotate(-45deg));
-}
-
-.close-menu::before,
-.close-menu::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    margin-top: -1px;
-    background: white;
-}
-
-// close-menu rotate animation 
-.close-menu:hover {
-    @include transform(rotate(360deg));
-    @include transition(.5s ease-out);
-    // @include animation-duration(2s);
-    // @include transform(100ms ease-in-out);
-}
-
-// End 
+// End Key Frames 
 // Desktop Layout 
 @include breakpoint-1200-sm {
     .overlay {
         .overlay-menu {
             font-size: 40px;
             letter-spacing: 20px;
+            .nav-title {
+                font-size: 20px;
+            }
         }
     }
 }

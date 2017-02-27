@@ -19,9 +19,11 @@
 
 <!-- Overlay new Code -->
  <div class="overlay">
-  <!--<h2 class="nav-title">Navigation</h2>-->
   <div class="overlay-menu">
     <ul>
+      <!--<li>
+        <h2 class="nav-title">Navigation</h2>
+      </li>-->
       <li>
         <a class="overlay-link" href="#">About</a>
       </li>
