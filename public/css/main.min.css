@@ -97,13 +97,8 @@ a,
 .logo-brand {
   font-size: 28px;
   font-family: 'Playfair Display', serif;
-<<<<<<< HEAD
-  font-weight: bold;
-  letter-spacing: 2px;
-=======
   letter-spacing: 2px;
   font-weight: bold;
->>>>>>> refactored
 }
 
 a.btn-sharp {
@@ -245,75 +240,29 @@ button.hamburger .bar3 {
   z-index: 9998;
 }
 
-.overlay .overlay-menu {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 15px;
-  padding: 10px;
-}
-
 .overlay.open {
   opacity: 1;
   visibility: visible;
   height: 100vh;
-<<<<<<< HEAD
 }
 
-.overlay.open ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  height: 100%;
-=======
->>>>>>> refactored
-}
-
-.overlay.open ul li {
-  display: block;
-  position: relative;
-  opacity: 0;
-  margin-bottom: 40px;
-  margin-top: 40px;
+.overlay.open li {
   -webkit-animation: fadeInDown .5s ease forwards;
           animation: fadeInDown .5s ease forwards;
   -webkit-animation-delay: .35s;
           animation-delay: .35s;
 }
 
-<<<<<<< HEAD
-.overlay.open ul li:nth-of-type(2) {
-=======
 .overlay.open li:nth-last-of-type(2) {
->>>>>>> refactored
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
 }
 
-<<<<<<< HEAD
-.overlay.open ul li:nth-of-type(3) {
-=======
 .overlay.open li:nth-last-of-type(3) {
->>>>>>> refactored
   -webkit-animation-delay: .45s;
           animation-delay: .45s;
 }
 
-<<<<<<< HEAD
-.overlay.open ul li a {
-  display: block;
-  position: relative;
-  color: white;
-  text-decoration: none;
-  overflow: hidden;
-=======
 .overlay .overlay-menu {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -410,7 +359,6 @@ button.hamburger .bar3 {
   bottom: 0;
   -webkit-transform: translateY(10px);
   transform: translateY(10px);
->>>>>>> refactored
 }
 
 @-webkit-keyframes fadeInDown {
@@ -437,8 +385,6 @@ button.hamburger .bar3 {
   }
 }
 
-<<<<<<< HEAD
-=======
 @media only screen and (min-width: 768px) {
   nav {
     background-color: transparent !important;
@@ -476,14 +422,10 @@ button.hamburger .bar3 {
   }
 }
 
->>>>>>> refactored
 @media only screen and (min-width: 1200px) {
   .overlay .overlay-menu {
     font-size: 40px;
     letter-spacing: 15px;
-  }
-  .overlay .overlay-menu .nav-title {
-    font-size: 20px;
   }
 }
 
@@ -505,7 +447,7 @@ button.hamburger .bar3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(34, 40, 44, 0.2);
+  background-color: rgba(34, 40, 44, 0.5);
   z-index: 9999;
 }
 
