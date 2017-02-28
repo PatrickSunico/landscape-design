@@ -1,8 +1,8 @@
 <div class="tile is-ancestor">
   <div class="tile is-parent">
     <article class="tile is-child box">
-      <figure class="image is-4by3">
-        <img src="http://bulma.io/images/placeholders/640x480.png">
+      <figure class="image">
+        <img src="./images/showcase/image-1.jpg">
       </figure>
 
       <p class="title">First Box</p>
@@ -13,8 +13,8 @@
   
   <div class="tile is-parent">
     <article class="tile is-child box">
-      <figure class="image is-4by3">
-        <img src="http://bulma.io/images/placeholders/640x480.png">
+      <figure class="image">
+        <img src="./images/showcase/image-2.jpg">
       </figure>
 
       <p class="title">Middle box</p>
@@ -24,8 +24,8 @@
   </div>
   <div class="tile is-parent">
     <article class="tile is-child box">
-      <figure class="image is-4by3">
-        <img src="http://bulma.io/images/placeholders/640x480.png">
+      <figure class="image">
+        <img src="./images/showcase/image-3.jpg">
       </figure>
 
       <p class="title">Last Box</p>
@@ -65,11 +65,10 @@
   </div>
 </div>
 
-<div class="tile is-ancestor">
-  
-</div>
 
 
-<?php 
-  displayImages();
-?>
+<!--<div class="tile is-ancestor">-->
+  <?php 
+    displayImages();
+  ?>
+<!--</div>-->

@@ -25,31 +25,54 @@
 <?php 
 
   function displayImages(){
-    $showcaseDirName = "images/showcase/";
+    $showcaseDirName = "./images/showcase/";
     $showcaseImages = glob($showcaseDirName."*.jpg");
     $maxWidth = 1072;
     $minWidth = 508;
-    $countMax = 0;
-    $countMin = 0;
+    $counter = 0;
+    $ancestor = "<div class='tile is-ancestor'>";
+    $maxImg = count($showcaseImages);
 
-      foreach($showcaseImages as $showcaseImage) {
+    // Set number of rows for the grid
+    $rows = 3;
+
+    // echo count($showcaseImages) . " images " . "\n";
+      foreach($showcaseImages as $key=>$showcaseImage) {
         list($width, $height) = getimagesize($showcaseImage);
-        echo $width . " x " . $height . "<br>";
-        echo "<br>";
-        // Count how many images there are with different dimensions
-        if($width >= $maxWidth) {
-          
-          $countMax++;
+        
+?>
+<?php
 
-        } elseif($width <= $minWidth) {
-
-          $countMin++;
+        if($counter % 3 == 0) {
+          echo "<div class='tile is-ancestor'>";
         }
-      }
-        echo $countMax . "image(s)" . "\n";
-        echo $countMin . "image(s)". "\n";
-  }
+        // first 3 rows with small images        
+        // if($counter == $rows) {
+        //   echo $ancestor;
+        // }
+        //   if($width <= $minWidth && $counter <= $rows){
+        //       echo '<div class="tile is-parent">';
+        //         echo '<article class="tile is-child box">';       
+        //           echo '<figure class="image">';
+        //             echo '<img src="'.  $showcaseImage . '" alt="">';
+        //           echo '</figure>';
+        //         echo "</article>";
+        //       echo '</div>';
+        //   }
+        // if($counter == $rows){
+        //   echo "</div>";
+        // }
 
+        // else if($width <= $minWidth || $width >= $maxWidth && $counter >= 3) {         
+        //     echo '<div style="background:aqua;" class="">';
+        //       echo "<li>";
+        //         echo $showcaseImage;
+        //       echo "</li>";
+        //     echo '</div>';
+        // }
+      $counter++;
+    }
+  }
 ?>
 
 
