@@ -1,4 +1,4 @@
-<div class="tile is-ancestor">
+<!--<div class="tile is-ancestor">
   <div class="tile is-parent">
     <article class="tile is-child box">
       <figure class="image">
@@ -35,7 +35,6 @@
   </div>
 </div>
 
-<!-- 1072 x 762 -->
 <div class="tile is-ancestor">
     <div class="tile is-parent is-8">
     <article class="tile is-child box">
@@ -50,7 +49,6 @@
     </article>
   </div>
 
-<!-- 508 x 762 -->
   <div class="tile is-parent">
     <article class="tile is-child box">
       <figure class="image">
@@ -63,12 +61,6 @@
       </div>
     </article>
   </div>
-</div>
+</div>-->
 
-
-
-<!--<div class="tile is-ancestor">-->
-  <?php 
-    displayImages();
-  ?>
-<!--</div>-->
+<?php displayImages();?>

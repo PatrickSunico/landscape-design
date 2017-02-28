@@ -23,56 +23,42 @@
 ?>
 
 <?php 
-
+  require("includes/showcase_logic.php");
   function displayImages(){
     $showcaseDirName = "./images/showcase/";
     $showcaseImages = glob($showcaseDirName."*.jpg");
     $maxWidth = 1072;
     $minWidth = 508;
     $counter = 0;
-    $ancestor = "<div class='tile is-ancestor'>";
-    $maxImg = count($showcaseImages);
-
     // Set number of rows for the grid
     $rows = 3;
 
     // echo count($showcaseImages) . " images " . "\n";
-      foreach($showcaseImages as $key=>$showcaseImage) {
+      foreach($showcaseImages as $key=>$showcaseImage) :
         list($width, $height) = getimagesize($showcaseImage);
-        
+
+        // echo $width . " x " . $height;
+
+        if ($counter % $rows == 0): 
+          echo '<div class="tile is-ancestor">';
+        endif; 
 ?>
+
+<?php 
+        // sorting logic
+        sortImages($width, $minWidth, $maxWidth, $showcaseImage, $counter, $rows);
+?>          
+
+
 <?php
-
-        if($counter % 3 == 0) {
-          echo "<div class='tile is-ancestor'>";
-        }
-        // first 3 rows with small images        
-        // if($counter == $rows) {
-        //   echo $ancestor;
-        // }
-        //   if($width <= $minWidth && $counter <= $rows){
-        //       echo '<div class="tile is-parent">';
-        //         echo '<article class="tile is-child box">';       
-        //           echo '<figure class="image">';
-        //             echo '<img src="'.  $showcaseImage . '" alt="">';
-        //           echo '</figure>';
-        //         echo "</article>";
-        //       echo '</div>';
-        //   }
-        // if($counter == $rows){
-        //   echo "</div>";
-        // }
-
-        // else if($width <= $minWidth || $width >= $maxWidth && $counter >= 3) {         
-        //     echo '<div style="background:aqua;" class="">';
-        //       echo "<li>";
-        //         echo $showcaseImage;
-        //       echo "</li>";
-        //     echo '</div>';
-        // }
-      $counter++;
+          // if result of modulo results 2, close the row
+          if($counter % $rows == 2) :    
+            echo "</div>";
+          endif;
+          // counter variable
+          $counter++;
+      endforeach;
     }
-  }
 ?>
 
 
