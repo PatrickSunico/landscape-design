@@ -6,7 +6,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -85,7 +86,7 @@ a,
 }
 
 .h3 {
-  font-size: 1.200em;
+  font-size: 1.300em;
   letter-spacing: 2px;
 }
 
@@ -96,8 +97,13 @@ a,
 .logo-brand {
   font-size: 28px;
   font-family: 'Playfair Display', serif;
+<<<<<<< HEAD
   font-weight: bold;
   letter-spacing: 2px;
+=======
+  letter-spacing: 2px;
+  font-weight: bold;
+>>>>>>> refactored
 }
 
 a.btn-sharp {
@@ -113,13 +119,13 @@ a.btn-sharp {
     font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
   }
   .h3 {
-    font-size: calc(70% + ((1vw - 0.48rem) * 1.389));
+    font-size: calc(100% + ((1vw - 0.48rem) * 1.389));
   }
   .p-heading {
     font-size: calc(70% + ((1vw - 0.48rem) * 0.382));
   }
   .p-main {
-    font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
+    font-size: calc(70% + ((1vw - 0.1rem) * 0.486));
   }
   a.btn-sharp {
     font-size: calc(70% + ((1vw - 0.48rem) * 0.486));
@@ -127,17 +133,28 @@ a.btn-sharp {
 }
 
 nav {
-  background-color: white;
-  padding: 10px;
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  box-pack: justify;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  background-color: white;
+  padding: 10px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: fixed;
@@ -156,6 +173,9 @@ nav ul.nav-wrapper {
   padding-left: 0;
   list-style: none;
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -183,7 +203,7 @@ button.hamburger {
 
 button.hamburger:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
@@ -210,6 +230,215 @@ button.hamburger .bar3 {
   width: 20px;
 }
 
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 9998;
+}
+
+.overlay .overlay-menu {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 15px;
+  padding: 10px;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100vh;
+<<<<<<< HEAD
+}
+
+.overlay.open ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+=======
+>>>>>>> refactored
+}
+
+.overlay.open ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  -webkit-animation: fadeInDown .5s ease forwards;
+          animation: fadeInDown .5s ease forwards;
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+
+<<<<<<< HEAD
+.overlay.open ul li:nth-of-type(2) {
+=======
+.overlay.open li:nth-last-of-type(2) {
+>>>>>>> refactored
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+<<<<<<< HEAD
+.overlay.open ul li:nth-of-type(3) {
+=======
+.overlay.open li:nth-last-of-type(3) {
+>>>>>>> refactored
+  -webkit-animation-delay: .45s;
+          animation-delay: .45s;
+}
+
+<<<<<<< HEAD
+.overlay.open ul li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+=======
+.overlay .overlay-menu {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  padding: 10px;
+}
+
+.overlay .overlay-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.overlay .overlay-menu ul li {
+  opacity: 0;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.overlay .overlay-menu ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -ms-flex-direction: normal;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  margin: 0 auto;
+  outline: none;
+  color: #d8d8d8;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.overlay .overlay-menu ul li a:hover, .overlay .overlay-menu ul li a:focus {
+  outline: none;
+  color: #fff;
+}
+
+.overlay .overlay-menu ul li a:hover::before, .overlay .overlay-menu ul li a:focus::before, .overlay .overlay-menu ul li a:hover::after, .overlay .overlay-menu ul li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.overlay .overlay-menu ul li a::before, .overlay .overlay-menu ul li a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.overlay .overlay-menu ul li a::before {
+  top: 0;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.overlay .overlay-menu ul li a::after {
+  bottom: 0;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+>>>>>>> refactored
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+<<<<<<< HEAD
+=======
 @media only screen and (min-width: 768px) {
   nav {
     background-color: transparent !important;
@@ -247,107 +476,11 @@ button.hamburger .bar3 {
   }
 }
 
-.overlay {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity .35s, visibility .35s, height .35s;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  z-index: 9998;
-}
-
-.overlay .overlay-menu {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 25px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 15px;
-  padding: 10px;
-}
-
-.overlay.open {
-  opacity: 1;
-  visibility: visible;
-  height: 100vh;
-}
-
-.overlay.open ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  height: 100%;
-}
-
-.overlay.open ul li {
-  display: block;
-  position: relative;
-  opacity: 0;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  -webkit-animation: fadeInDown .5s ease forwards;
-          animation: fadeInDown .5s ease forwards;
-  -webkit-animation-delay: .35s;
-          animation-delay: .35s;
-}
-
-.overlay.open ul li:nth-of-type(2) {
-  -webkit-animation-delay: .4s;
-          animation-delay: .4s;
-}
-
-.overlay.open ul li:nth-of-type(3) {
-  -webkit-animation-delay: .45s;
-          animation-delay: .45s;
-}
-
-.overlay.open ul li a {
-  display: block;
-  position: relative;
-  color: white;
-  text-decoration: none;
-  overflow: hidden;
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
+>>>>>>> refactored
 @media only screen and (min-width: 1200px) {
   .overlay .overlay-menu {
     font-size: 40px;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
   }
   .overlay .overlay-menu .nav-title {
     font-size: 20px;
@@ -393,7 +526,7 @@ button.hamburger .bar3 {
 
 .spacing {
   text-align: left;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 a.btn-sharp {
@@ -411,7 +544,7 @@ a.btn-sharp {
 
 @media only screen and (min-width: 1200px) {
   .spacing {
-    padding: 0 35px;
+    padding: 0 75px;
   }
 }
 
@@ -439,9 +572,28 @@ a.btn-sharp {
   }
 }
 
+.container-spacing {
+  padding: 80px 15px;
+}
+
 .content-wrapper {
   vertical-align: middle;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 0 15px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content-wrapper {
+    padding: 80px 15px;
+    max-width: 1600px;
+  }
+}
+
+.showcase {
+  background: #fbfbfb;
+}
+
+.tile-spacing {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

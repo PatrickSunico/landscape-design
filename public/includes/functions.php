@@ -19,5 +19,47 @@
     </div>
   </div>
 <?php }
-  }
+    }
 ?>
+
+<?php 
+  require("includes/showcase_logic.php");
+  function displayImages(){
+    $showcaseDirName = "./images/showcase/";
+    $showcaseImages = glob($showcaseDirName."*.jpg");
+    $maxWidth = 1072;
+    $minWidth = 508;
+    $counter = 0;
+    // Set number of rows for the grid
+    $rows = 3;
+
+    // echo count($showcaseImages) . " images " . "\n";
+      foreach($showcaseImages as $key=>$showcaseImage) :
+        list($width, $height) = getimagesize($showcaseImage);
+
+        // echo $width . " x " . $height;
+
+        if ($counter % $rows == 0): 
+          echo '<div class="tile is-ancestor">';
+        endif; 
+?>
+
+<?php 
+        // sorting logic
+        sortImages($width, $minWidth, $maxWidth, $showcaseImage, $counter, $rows);
+?>          
+
+
+<?php
+          // if result of modulo results 2, close the row
+          if($counter % $rows == 2) :    
+            echo "</div>";
+          endif;
+          // counter variable
+          $counter++;
+      endforeach;
+    }
+?>
+
+
+

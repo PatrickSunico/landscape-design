@@ -1,0 +1,28 @@
+// Main Container
+.container-spacing {
+    padding: 80px 15px;
+}
+
+.content-wrapper {
+    vertical-align: middle;
+    // margin-left: 10px;
+    // margin-right: 10px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+@include breakpoint-1200-sm {
+    .content-wrapper {
+        padding: 80px 15px;
+        max-width: 1600px;
+    }
+}
+
+.showcase {
+    background: #fbfbfb;
+}
+
+.tile-spacing {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

@@ -14,7 +14,11 @@
         left: 0;
         right: 0;
         bottom: 0;
+<<<<<<< HEAD
         background-color: rgba(34, 40, 44, 0.2);
+=======
+        background-color: rgba(34, 40, 44, 0.5);
+>>>>>>> refactored
         z-index: 9999;
     }
     .swiper-slide {
@@ -29,7 +33,11 @@
 
 .spacing {
     text-align: left;
+<<<<<<< HEAD
     padding: 0 15px;
+=======
+    padding: 0 20px;
+>>>>>>> refactored
 }
 
 a.btn-sharp {
@@ -48,7 +56,11 @@ a.btn-sharp {
 
 @include breakpoint-1200-sm {
     .spacing {
+<<<<<<< HEAD
         padding: 0 35px;
+=======
+        padding: 0 75px;
+>>>>>>> refactored
     }
 }
 

@@ -12,7 +12,7 @@ var reload = browserSync.reload;
 
 var rawPaths = {
     scss: './public/scss/**/*.scss*',
-    index: './public/index.php',
+    php: './public/index.php',
     js: './public/js/scripts.js'
 };
 
@@ -58,5 +58,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['browser-sync', 'sass', 'watch'], function() {
-    gulp.watch(['public/*.php'], [reload]);
+    gulp.watch(['public/includes/*.php*'], [reload]);
 });

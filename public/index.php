@@ -8,8 +8,18 @@
 </div>
 
 <!-- Other Sections -->
-<div class="container is-fluid">
+<div class="content-wrapper">
   <?php include("includes/about.php"); ?>
+</div>
+
+<!-- Showcase -->
+<div class="showcase">
+  <div class="content-wrapper">
+    <h3 class="h3 underlined__black">Showcase</h3>
+    <div class="tile-spacing">
+      <?php include("includes/showcase.php"); ?>
+    </div>
+  </div>
 </div>
 
 

@@ -1,7 +1,10 @@
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Domine|Lato:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+<<<<<<< HEAD
 // Mixins
+=======
+>>>>>>> refactored
 @import 'mixins/mixins';
 //vendor
 @import 'vendor/bourbon/bourbon';
@@ -9,6 +12,11 @@
 @import 'partials/global';
 @import 'partials/typography';
 // Partials
-@import 'partials/navigation';
+@import 'partials/navigation-mobile';
+@import 'partials/navigation-desktop';
 @import 'partials/carousel';
+<<<<<<< HEAD
 @import 'partials/about';
+=======
+@import 'partials/showcase';
+>>>>>>> refactored

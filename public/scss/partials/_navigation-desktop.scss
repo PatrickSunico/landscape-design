@@ -1,0 +1,51 @@
+// Desktop Navbar width < 1200 
+@include breakpoint-768-sm {
+    nav {
+        background-color: transparent !important;
+        position: absolute;
+        .logo {
+            .logo-brand {
+                margin: 0 34px;
+            }
+        }
+        ul.nav-wrapper {
+            li {
+                margin: 20px;
+                a {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    // burger styles
+    button.hamburger {
+        height: 30px;
+        .bar1,
+        .bar2,
+        .bar3 {
+            height: 2px;
+            background-color: #fff;
+            margin: 6px 0;
+            @include transition(0.4s);
+        }
+        .bar1 {
+            width: 30px;
+        }
+        .bar2 {
+            width: 25px;
+        }
+        .bar3 {
+            width: 20px;
+        }
+    }
+}
+
+// Overlay Desktop Layout
+@include breakpoint-1200-sm {
+    .overlay {
+        .overlay-menu {
+            font-size: 40px;
+            letter-spacing: 15px;
+        }
+    }
+}
