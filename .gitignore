@@ -59,7 +59,6 @@ bower_components/
 sftp-config*
 *.sublime-*
 
-
 # Project Specific #
 ####################
 /dist
