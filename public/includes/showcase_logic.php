@@ -1,8 +1,6 @@
 
 <!--if image width is less than $minwidth small images-->
-
 <?php 
-
   function sortImages($width, $min, $max, $showcaseImage, $counter, $rows) {
     $width = $width;
     $minWidth = $min;
@@ -12,7 +10,6 @@
     $rows = $rows;
     if($width <= $minWidth) : 
 ?> 
-
     <div class="tile is-parent">
       <div class="tile is-child box">
         <figure class="image">

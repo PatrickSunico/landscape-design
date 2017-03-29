@@ -5,7 +5,6 @@
   $jsondata = file_get_contents("resources.json");
   $json = json_decode($jsondata, true);
 ?>
-
 <?php
   function extractJSON($json) {
     foreach($json['slides'] as $slide) {
@@ -21,7 +20,6 @@
 <?php }
     }
 ?>
-
 <?php 
   require("includes/showcase_logic.php");
   function displayImages(){
@@ -30,26 +28,18 @@
     $maxWidth = 1072;
     $minWidth = 508;
     $counter = 0;
-    // Set number of rows for the grid
     $rows = 3;
 
-    // echo count($showcaseImages) . " images " . "\n";
       foreach($showcaseImages as $key=>$showcaseImage) :
         list($width, $height) = getimagesize($showcaseImage);
-
-        // echo $width . " x " . $height;
-
         if ($counter % $rows == 0): 
           echo '<div class="tile is-ancestor">';
         endif; 
 ?>
-
 <?php 
         // sorting logic
         sortImages($width, $minWidth, $maxWidth, $showcaseImage, $counter, $rows);
 ?>          
-
-
 <?php
           // if result of modulo results 2, close the row
           if($counter % $rows == 2) :    

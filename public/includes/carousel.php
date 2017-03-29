@@ -14,7 +14,6 @@
       ?>
   </div>
 </div>
-
 <div class="swiper-container s2">
   <div class="swiper-wrapper">
     <!-- implode json predefined data  -->
