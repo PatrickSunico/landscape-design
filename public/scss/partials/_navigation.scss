@@ -1,0 +1,202 @@
+// Mobile
+nav {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 9999;
+    padding: 0;
+    .logo {
+        .logo-brand {
+            margin: 0 20px;
+            color: black;
+        }
+    }
+    ul.nav-wrapper {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        li {
+            margin: 20px;
+            a {
+                line-height: 2;
+            }
+        }
+    }
+}
+
+// burger styles
+button.hamburger {
+    height: 30px;
+    background-color: transparent !important;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    @include transition(all .4s ease-out);
+    z-index: 9999;
+    // Hover Animation
+    &:hover {
+        transform: scale(1.1);
+        @include transition(all .4s ease-in);
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+        height: 2px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .bar1 {
+        width: 30px;
+    }
+    .bar2 {
+        width: 25px;
+    }
+    .bar3 {
+        width: 20px;
+    }
+}
+
+// Desktop
+@include breakpoint-768-sm {
+    nav {
+        background-color: transparent !important;
+        position: absolute;
+        .logo {
+            .logo-brand {
+                margin: 0 34px;
+            }
+        }
+        ul.nav-wrapper {
+            li {
+                margin: 20px;
+                a {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+    // burger styles
+    button.hamburger {
+        height: 30px;
+        .bar1,
+        .bar2,
+        .bar3 {
+            height: 2px;
+            background-color: #fff;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .bar1 {
+            width: 30px;
+        }
+        .bar2 {
+            width: 25px;
+        }
+        .bar3 {
+            width: 20px;
+        }
+    }
+}
+
+// /*
+//   -----Overlay-----
+// */
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    z-index: 9998;
+    .overlay-menu {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 15px;
+        padding: 10px;
+    }
+}
+
+// open overlay, append open in overlay and li animations
+.overlay {
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            // note: just add more child li elements to set animation delays to your needs
+            li {
+                display: block;
+                position: relative;
+                opacity: 0;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                animation: fadeInDown .5s ease forwards;
+                animation-delay: .35s;
+                &:nth-of-type(2) {
+                    animation-delay: .4s;
+                }
+                &:nth-of-type(3) {
+                    animation-delay: .45s;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    color: white;
+                    text-decoration: none;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+// Keyframes
+@include keyframes(fadeInDown) {
+    from {
+        opacity: 0;
+        @include transform(translateY(-20px));
+    }
+    to {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+}
+
+// End Key Frames 
+// Desktop Layout 
+@include breakpoint-1200-sm {
+    .overlay {
+        .overlay-menu {
+            font-size: 40px;
+            letter-spacing: 20px;
+            .nav-title {
+                font-size: 20px;
+            }
+        }
+    }
+}

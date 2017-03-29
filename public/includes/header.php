@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" media="screen" title="no title">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
-        <link rel="stylesheet" href="/css/main.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <?php include("includes/navigation.php"); ?>
